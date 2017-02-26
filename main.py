@@ -44,7 +44,7 @@ if __name__ == '__main__':
 
         result = get_pages(urls)
         pr = sum(result) * 100 / 8
-        get_print(i, name_org, result)
+        get_print(i, name_org, result, pr)
 
     driver.quit()
 
