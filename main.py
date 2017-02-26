@@ -4,9 +4,8 @@ from selenium import webdriver
 from datetime import datetime
 from libs import pars
 from inn_org import inns
-from organization import  get_value
+from organization import get_value
 from print_ import get_print, print_main
-
 
 
 def get_pages(urls):
@@ -45,10 +44,13 @@ if __name__ == '__main__':
                 f'http://bus.gov.ru/pub/agency/{value1}/measures'
                 ]
 
-
         result = get_pages(urls)
         get_print(i, name_org, result)
 
     driver.quit()
+
+    with open('otchet.txt', 'a', encoding='utf-8') as f:
+        print('-' * 127, file=f)
+
     end_time = datetime.now()
-    print(str(end_time - st_time))
+    print(str(end_time - st_time).split('.')[0])
