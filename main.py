@@ -1,5 +1,3 @@
-# 2017 Alti, Kurya (c)Vigi-Soft
-#------------------------------
 from selenium import webdriver
 from datetime import datetime
 from libs import pars
